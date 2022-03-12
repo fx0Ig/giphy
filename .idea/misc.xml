@@ -8,7 +8,10 @@
         <entry key="..\:/download/Giphy/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/download/Giphy/app/src/main/res/layout/fragment_overview.xml" value="0.1793478260869565" />
         <entry key="..\:/download/Giphy/app/src/main/res/layout/grid_view_item.xml" value="0.1793478260869565" />
+        <entry key="..\:/download/Giphy/app/src/main/res/layout/one_gif_fragment.xml" value="0.22010869565217392" />
+        <entry key="..\:/download/Giphy/app/src/main/res/layout/view_fullscreen_item.xml" value="0.2151268115942029" />
         <entry key="..\:/download/Giphy/app/src/main/res/layout/view_item.xml" value="0.17300724637681159" />
+        <entry key="..\:/download/Giphy/app/src/main/res/layout/view_pager_item.xml" value="0.22010869565217392" />
       </map>
     </option>
   </component>

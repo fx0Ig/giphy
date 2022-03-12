@@ -18,6 +18,9 @@ class GifsViewModel : ViewModel() {
     private val _gifs: MutableLiveData<List<Gif>> = MutableLiveData(emptyList())
     val gifs: LiveData<List<Gif>> = _gifs
 
+    var currentPosition: Int = -1
+
+
     init {
         getGifs()
     }
