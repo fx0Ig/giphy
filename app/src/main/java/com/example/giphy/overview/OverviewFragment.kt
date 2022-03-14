@@ -23,7 +23,6 @@ class OverviewFragment : Fragment(), GifClickListener {
     private val viewModel: GifsViewModel by activityViewModels()
     private lateinit var binding: FragmentOverviewBinding
     private lateinit var adapter: ItemAdapter
-    private val retrofitService: GiphyApiService by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +40,7 @@ class OverviewFragment : Fragment(), GifClickListener {
         .OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                viewModel.listScreenPosition =
+                viewModel.detailScreenPosition =
                     (recyclerView.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
             }
         })
@@ -74,7 +73,7 @@ class OverviewFragment : Fragment(), GifClickListener {
         )
         viewModel.gifs.observe(viewLifecycleOwner) {
             adapter.gifList = it
-            binding.recyclerView.post { binding.recyclerView.scrollToPosition(viewModel.listScreenPosition) }
+            binding.recyclerView.post { binding.recyclerView.scrollToPosition(viewModel.detailScreenPosition) }
         }
 
     }

@@ -11,12 +11,11 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.giphy.databinding.OneGifFragmentBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class SecondScreenFragment : Fragment() {
 
-    private val viewModel: GifsViewModel by viewModel<GifsViewModel>()
+    private val viewModel: GifsViewModel by activityViewModels()
     private lateinit var binding: OneGifFragmentBinding
     private lateinit var adapter: FullScreenItemAdapter
 
