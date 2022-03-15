@@ -37,7 +37,8 @@ class FullScreenItemAdapter() :
 
         fun bind(item: Gif, position: Int) {
             Glide.with(binding.root).load(item.imgURL).error(R.drawable.ic_broken_image)
-                .fallback(R.drawable.loading_animation).diskCacheStrategy(DiskCacheStrategy.ALL).into(binding.imageScreen)
+                .fallback(R.drawable.loading_animation).diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(binding.imageScreen)
         }
 
 

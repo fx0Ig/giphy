@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 
- data class ApiResponse(
+data class ApiResponse(
     val `data`: List<Data> = listOf(),
     val meta: Meta = Meta(),
     val pagination: Pagination = Pagination()
@@ -46,29 +46,29 @@ import com.squareup.moshi.JsonClass
         val username: String = ""
     ) {
         @JsonClass(generateAdapter = true)
-         data class Analytics(
+        data class Analytics(
             val onclick: Onclick = Onclick(),
             val onload: Onload = Onload(),
             val onsent: Onsent = Onsent()
         ) {
             @JsonClass(generateAdapter = true)
-             data class Onclick(
+            data class Onclick(
                 val url: String = ""
             )
 
             @JsonClass(generateAdapter = true)
-             data class Onload(
+            data class Onload(
                 val url: String = ""
             )
 
             @JsonClass(generateAdapter = true)
-             data class Onsent(
+            data class Onsent(
                 val url: String = ""
             )
         }
 
         @JsonClass(generateAdapter = true)
-         data class Images(
+        data class Images(
             val downsized: Downsized = Downsized(),
             @Json(name = "downsized_large")
             val downsizedLarge: DownsizedLarge = DownsizedLarge(),
@@ -113,7 +113,7 @@ import com.squareup.moshi.JsonClass
             val wStill: WStill = WStill()
         ) {
             @JsonClass(generateAdapter = true)
-             data class Downsized(
+            data class Downsized(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -121,7 +121,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class DownsizedLarge(
+            data class DownsizedLarge(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -129,7 +129,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class DownsizedMedium(
+            data class DownsizedMedium(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -137,7 +137,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class DownsizedSmall(
+            data class DownsizedSmall(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -146,7 +146,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class DownsizedStill(
+            data class DownsizedStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -154,32 +154,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedHeight(
-                val height: String = "",
-                val mp4: String = "",
-                @Json(name = "mp4_size")
-                val mp4Size: String = "",
-                val size: String = "",
-                val url: String = "",
-                val webp: String = "",
-                @Json(name = "webp_size")
-                val webpSize: String = "",
-                val width: String = ""
-            )
-
-            @JsonClass(generateAdapter = true)
-             data class FixedHeightDownsampled(
-                val height: String = "",
-                val size: String = "",
-                val url: String = "",
-                val webp: String = "",
-                @Json(name = "webp_size")
-                val webpSize: String = "",
-                val width: String = ""
-            )
-
-            @JsonClass(generateAdapter = true)
-             data class FixedHeightSmall(
+            data class FixedHeight(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -193,23 +168,18 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedHeightSmallStill(
+            data class FixedHeightDownsampled(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
+                val webp: String = "",
+                @Json(name = "webp_size")
+                val webpSize: String = "",
                 val width: String = ""
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedHeightStill(
-                val height: String = "",
-                val size: String = "",
-                val url: String = "",
-                val width: String = ""
-            )
-
-            @JsonClass(generateAdapter = true)
-             data class FixedWidth(
+            data class FixedHeightSmall(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -223,18 +193,23 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedWidthDownsampled(
+            data class FixedHeightSmallStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
-                val webp: String = "",
-                @Json(name = "webp_size")
-                val webpSize: String = "",
                 val width: String = ""
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedWidthSmall(
+            data class FixedHeightStill(
+                val height: String = "",
+                val size: String = "",
+                val url: String = "",
+                val width: String = ""
+            )
+
+            @JsonClass(generateAdapter = true)
+            data class FixedWidth(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -248,7 +223,32 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedWidthSmallStill(
+            data class FixedWidthDownsampled(
+                val height: String = "",
+                val size: String = "",
+                val url: String = "",
+                val webp: String = "",
+                @Json(name = "webp_size")
+                val webpSize: String = "",
+                val width: String = ""
+            )
+
+            @JsonClass(generateAdapter = true)
+            data class FixedWidthSmall(
+                val height: String = "",
+                val mp4: String = "",
+                @Json(name = "mp4_size")
+                val mp4Size: String = "",
+                val size: String = "",
+                val url: String = "",
+                val webp: String = "",
+                @Json(name = "webp_size")
+                val webpSize: String = "",
+                val width: String = ""
+            )
+
+            @JsonClass(generateAdapter = true)
+            data class FixedWidthSmallStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -256,7 +256,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class FixedWidthStill(
+            data class FixedWidthStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -264,14 +264,14 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class Looping(
+            data class Looping(
                 val mp4: String = "",
                 @Json(name = "mp4_size")
                 val mp4Size: String = ""
             )
 
             @JsonClass(generateAdapter = true)
-             data class Original(
+            data class Original(
                 val frames: String = "",
                 val hash: String = "",
                 val height: String = "",
@@ -287,7 +287,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class OriginalMp4(
+            data class OriginalMp4(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -296,7 +296,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class OriginalStill(
+            data class OriginalStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -304,7 +304,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class Preview(
+            data class Preview(
                 val height: String = "",
                 val mp4: String = "",
                 @Json(name = "mp4_size")
@@ -313,7 +313,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class PreviewGif(
+            data class PreviewGif(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -321,7 +321,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class PreviewWebp(
+            data class PreviewWebp(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -329,7 +329,7 @@ import com.squareup.moshi.JsonClass
             )
 
             @JsonClass(generateAdapter = true)
-             data class WStill(
+            data class WStill(
                 val height: String = "",
                 val size: String = "",
                 val url: String = "",
@@ -338,7 +338,7 @@ import com.squareup.moshi.JsonClass
         }
 
         @JsonClass(generateAdapter = true)
-         data class User(
+        data class User(
             @Json(name = "avatar_url")
             val avatarUrl: String = "",
             @Json(name = "banner_image")
@@ -361,7 +361,7 @@ import com.squareup.moshi.JsonClass
     }
 
     @JsonClass(generateAdapter = true)
-     data class Meta(
+    data class Meta(
         val msg: String = "",
         @Json(name = "response_id")
         val responseId: String = "",
@@ -369,7 +369,7 @@ import com.squareup.moshi.JsonClass
     )
 
     @JsonClass(generateAdapter = true)
-     data class Pagination(
+    data class Pagination(
         val count: Int = 0,
         val offset: Int = 0,
         @Json(name = "total_count")

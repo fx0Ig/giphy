@@ -22,7 +22,7 @@ class ItemAdapter(val listener: GifClickListener) :
     var gifList: List<Gif> = listOf()
         set(value) {
             field = value
-            notifyItemRangeChanged(0,value.lastIndex)
+            notifyItemRangeChanged(0, value.lastIndex)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
